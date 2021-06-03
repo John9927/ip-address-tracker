@@ -1,5 +1,12 @@
 html {
   font-family: 'Rubik', sans-serif;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  html {
+    overflow: scroll;
+  }
 }
 
 html, body, div, span, applet, object, iframe,

@@ -111,8 +111,6 @@ input:focus {
   font-weight: bold;
 }
 
-
-
 .item {
   margin: 15px 0px;
   display: flex;
@@ -126,5 +124,23 @@ input:focus {
   .container__search {
     width: 90%;
     margin: 0 auto;
+  }
+
+  .container__result {
+    height: 330px;
+  }
+
+  .item {
+    justify-content: center;
+  }
+
+  .container__items {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0px 10px;
+    justify-content: initial;
+    margin: 0 auto;
+    align-items: center;
   }
 }
