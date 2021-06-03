@@ -7,7 +7,7 @@ export class GetIpService {
 
   constructor() { }
 
-   signIn(search: string) {
-     console.log(search)
+  signIn(search: string) {
+    console.log(search)
   }
 }

@@ -89,7 +89,7 @@ input:focus {
 .container__items {
   display: flex;
   width: 100%;
-  padding: 25px 40px;
+  padding: 32px 40px;
   justify-content: space-between;
 }
 
@@ -101,6 +101,8 @@ input:focus {
   flex-direction: column;
   font-size: 22px;
   font-weight: bold;
+  border-right: 2px solid hsl(0, 0%, 69%);
+  height: 90px;
 }
 
 .item {
@@ -111,7 +113,9 @@ input:focus {
   font-weight: 600;
 }
 
-
+.result__data {
+  margin-right: 15px;
+}
 
 
 @media screen and (max-width: 500px) {
