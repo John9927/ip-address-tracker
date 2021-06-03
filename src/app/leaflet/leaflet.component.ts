@@ -14,6 +14,4 @@ export class LeafletComponent implements OnInit {
   ngOnInit(): void {
     this.getIpService.getCoords();
   }
-
-
 }

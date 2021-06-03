@@ -18,13 +18,15 @@ export class AppComponent implements OnInit {
   constructor(private fb: FormBuilder, public getIpService: GetIpService) {
   }
 
-  ngOnInit() {  }
+  ngOnInit() {
+  }
 
   searchForm = this.fb.group({
     search: ['', [Validators.required]],
   });
 
   searchValue(search: string) {
+    this.getIpService.response = false;
     this.getIpService.searchValue(search);
     this.getData();
   }
@@ -35,9 +37,6 @@ export class AppComponent implements OnInit {
       this.getIpService.response = true;
       this.getIpService.coordLat = this.response.location.lat;
       this.getIpService.coordLon = this.response.location.lng;
-      console.log("Response", this.response);
-      console.log("coordLat", this.getIpService.coordLat);
-      console.log("coordLon", this.getIpService.coordLon);
     })
   }
 }
