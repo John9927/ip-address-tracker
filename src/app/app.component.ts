@@ -25,7 +25,7 @@ export class AppComponent implements OnInit {
   });
 
   searchValue(search: string) {
-    this.getIpService.signIn(search);
+    this.getIpService.searchValue(search);
     this.getData();
   }
 

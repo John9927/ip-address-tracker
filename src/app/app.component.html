@@ -8,8 +8,9 @@
       <div class="search">
         <form class="form" [formGroup]="searchForm">
           <input type="text" formControlName="search" placeholder="Search for any IP address or domain" #search>
-          <button class="button" (click)="searchValue(search.value)"><img src="./../assets/images/icon-arrow.svg"
-              alt=""></button>
+          <button class="button" (click)="searchValue(search.value)">
+            <img src="./../assets/images/icon-arrow.svg" alt="">
+          </button>
         </form>
       </div>
     </div>
