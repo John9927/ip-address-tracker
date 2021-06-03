@@ -22,4 +22,6 @@ export class GetIpService {
   getCity() {
     return this.http.get(`${this.url}?apiKey=${this.API}&ipAddress=${this.ipAddress}`)
   }
+
+
 }

@@ -24,7 +24,7 @@ export class LeafletComponent implements OnInit {
     center: latLng([this.getIpService.coordLat, this.getIpService.coordLon]),
   };
 
-  // Marker for the top of Mt. Ranier
+  // Marker
   summit = marker([this.getIpService.coordLat, this.getIpService.coordLon], {
     icon: icon({
       iconSize: [25, 41],
@@ -34,7 +34,7 @@ export class LeafletComponent implements OnInit {
     })
   });
 
-  // Layers control object with our two base layers and the three overlay layers
+  // Layers control
   layersControl = {
     overlays: {
       'City': this.summit

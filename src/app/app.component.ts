@@ -33,11 +33,11 @@ export class AppComponent implements OnInit {
     this.getIpService.getCity().subscribe(res => {
       this.response = res;
       this.getIpService.response = true;
-      this.name = this.response.isp;
       this.getIpService.coordLat = this.response.location.lat;
       this.getIpService.coordLon = this.response.location.lng;
-      console.log("coordLon", this.getIpService.coordLon);
+      console.log("Response", this.response);
       console.log("coordLat", this.getIpService.coordLat);
+      console.log("coordLon", this.getIpService.coordLon);
     })
   }
 }
