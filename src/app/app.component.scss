@@ -83,6 +83,7 @@ input:focus {
   margin: 0 auto;
   border-radius: 12px;
   background: whitesmoke;
+  z-index: 10000;
 }
 
 // Container
@@ -109,11 +110,7 @@ input:focus {
   font-weight: bold;
 }
 
-.map {
-  height: 100%;
-  padding: 0;
-  width: 100%;
-}
+
 
 .item {
   margin: 15px 0px;
@@ -123,11 +120,6 @@ input:focus {
   font-weight: 600;
 }
 
-.container__maps {
-  display: flex;
-  height: 61.8vh;
-  width: 100%;
-}
 
 @media screen and (max-width: 500px) {
   .container__search {

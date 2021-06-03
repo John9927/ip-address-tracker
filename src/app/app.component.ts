@@ -1,7 +1,6 @@
 import { GetIpService } from './services/get-ip.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
-import { latLng, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -11,35 +10,34 @@ import { latLng, tileLayer } from 'leaflet';
 export class AppComponent implements OnInit {
   title = 'ip-address-tracker';
   response: any;
-  constructor(private fb: FormBuilder, public getIpService: GetIpService) { }
+  name: string;
 
+  lat: string;
+  lng: string;
+  search;
+  constructor(private fb: FormBuilder, public getIpService: GetIpService) {
+  }
 
-  options = {
-    layers: [
-      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap contributors'
-      })
-    ],
-    zoom: 7,
-    center: latLng([ 46.879966, -121.726909 ])
-  };
-
-
-  ngOnInit() {}
+  ngOnInit() {  }
 
   searchForm = this.fb.group({
     search: ['', [Validators.required]],
   });
 
-
-  onSign(search: string) {
+  searchValue(search: string) {
     this.getIpService.signIn(search);
+    this.getData();
+  }
 
-    if(search) {
-      this.getIpService.getCity().subscribe(res => {
-        this.response = res;
-        console.log(this.response);
-      })
-    }
+  getData() {
+    this.getIpService.getCity().subscribe(res => {
+      this.response = res;
+      this.getIpService.response = true;
+      this.name = this.response.isp;
+      this.getIpService.coordLat = this.response.location.lat;
+      this.getIpService.coordLon = this.response.location.lng;
+      console.log("coordLon", this.getIpService.coordLon);
+      console.log("coordLat", this.getIpService.coordLat);
+    })
   }
 }

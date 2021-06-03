@@ -8,12 +8,12 @@
       <div class="search">
         <form class="form" [formGroup]="searchForm">
           <input type="text" formControlName="search" placeholder="Search for any IP address or domain" #search>
-          <button class="button" (click)="onSign(search.value)"><img src="./../assets/images/icon-arrow.svg"
+          <button class="button" (click)="searchValue(search.value)"><img src="./../assets/images/icon-arrow.svg"
               alt=""></button>
         </form>
       </div>
     </div>
-    <!--  -->
+    <!-- Response -->
     <div class="container__result" *ngIf="response">
       <div class="result">
         <div class="container__items">
@@ -45,8 +45,6 @@
 </div>
 
 <!-- Leaflet JS -->
-<div class="container__maps" id="mapid">
-  <div class="map" leaflet [leafletOptions]="options">
-  </div>
-
+<div *ngIf="getIpService.response">
+  <app-leaflet></app-leaflet>
 </div>

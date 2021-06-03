@@ -6,9 +6,11 @@ import { AppComponent } from './app.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { LeafletModule } from '@asymmetrik/ngx-leaflet';
+import { LeafletComponent } from './leaflet/leaflet.component';
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LeafletComponent
   ],
   imports: [
     BrowserModule,
