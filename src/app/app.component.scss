@@ -1,0 +1,122 @@
+.container__main {
+  display: flex;
+  width: 100%;
+  height: 250px;
+  background: url('./../assets/images/pattern-bg.png') no-repeat;
+  flex-direction: column;
+  background-size: cover;
+  position: relative;
+}
+
+.container__title {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  font-size: 25px;
+  font-weight: 600;
+  color: white;
+  margin: 30px 0px;
+}
+
+// Search
+.master {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  margin: 100px auto;
+}
+
+.container__search {
+  display: flex;
+  width: 100%;
+  height: 50px;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.button {
+  background: black;
+  border: 0;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+  width: 55px;
+}
+
+.search {
+  display: flex;
+  width: 450px;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: white;
+}
+
+input {
+  border: 0;
+  width: 100%;
+  border-radius: 12px;
+  margin: 0 20px;
+}
+
+input:focus {
+  outline: none;
+}
+
+// Result
+.container__result {
+  display: flex;
+  width: 100%;
+  height: 150px;
+  margin: 40px 0;
+}
+
+.result {
+  display: flex;
+  width: 85%;
+  height: 100%;
+  margin: 0 auto;
+  border-radius: 12px;
+  background: whitesmoke;
+}
+
+// Container
+.container__items {
+  display: flex;
+  width: 100%;
+  padding: 25px 40px;
+  justify-content: space-between;
+}
+
+.id__address,
+.location,
+.timezone,
+.isp {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.item {
+  margin: 15px 0px;
+  display: flex;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+
+
+
+@media screen and (max-width: 500px) {
+  .container__search {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
