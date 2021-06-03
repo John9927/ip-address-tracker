@@ -1,6 +1,7 @@
 import { GetIpService } from './services/get-ip.service';
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
+import { latLng, tileLayer } from 'leaflet';
 
 @Component({
   selector: 'app-root',
@@ -12,11 +13,24 @@ export class AppComponent implements OnInit {
   response: any;
   constructor(private fb: FormBuilder, public getIpService: GetIpService) { }
 
+
+  options = {
+    layers: [
+      tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+      })
+    ],
+    zoom: 7,
+    center: latLng([ 46.879966, -121.726909 ])
+  };
+
+
   ngOnInit() {}
 
   searchForm = this.fb.group({
     search: ['', [Validators.required]],
   });
+
 
   onSign(search: string) {
     this.getIpService.signIn(search);

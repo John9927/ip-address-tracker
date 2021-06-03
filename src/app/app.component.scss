@@ -100,8 +100,6 @@ input:focus {
   flex-direction: column;
   font-size: 22px;
   font-weight: bold;
-  // border-right: 2px solid hsl(0, 0%, 69%);
-  // height: 90px;
 }
 
 .isp {
@@ -109,6 +107,12 @@ input:focus {
   flex-direction: column;
   font-size: 22px;
   font-weight: bold;
+}
+
+.map {
+  height: 100%;
+  padding: 0;
+  width: 100%;
 }
 
 .item {
@@ -119,10 +123,11 @@ input:focus {
   font-weight: 600;
 }
 
-// .result__data {
-//   margin-right: 15px;
-// }
-
+.container__maps {
+  display: flex;
+  height: 61.8vh;
+  width: 100%;
+}
 
 @media screen and (max-width: 500px) {
   .container__search {

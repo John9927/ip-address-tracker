@@ -15,7 +15,7 @@
     </div>
     <!--  -->
     <div class="container__result" *ngIf="response">
-      <div class="result" >
+      <div class="result">
         <div class="container__items">
           <div class="id__address">
             <span class="item">Ip Address</span>
@@ -40,6 +40,13 @@
       </div>
     </div>
 
+  </div>
+
+</div>
+
+<!-- Leaflet JS -->
+<div class="container__maps" id="mapid">
+  <div class="map" leaflet [leafletOptions]="options">
   </div>
 
 </div>
