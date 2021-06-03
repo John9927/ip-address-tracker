@@ -95,14 +95,20 @@ input:focus {
 
 .id__address,
 .location,
-.timezone,
+.timezone {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  font-weight: bold;
+  // border-right: 2px solid hsl(0, 0%, 69%);
+  // height: 90px;
+}
+
 .isp {
   display: flex;
   flex-direction: column;
   font-size: 22px;
   font-weight: bold;
-  border-right: 2px solid hsl(0, 0%, 69%);
-  height: 90px;
 }
 
 .item {
@@ -113,9 +119,9 @@ input:focus {
   font-weight: 600;
 }
 
-.result__data {
-  margin-right: 15px;
-}
+// .result__data {
+//   margin-right: 15px;
+// }
 
 
 @media screen and (max-width: 500px) {

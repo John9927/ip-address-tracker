@@ -7,12 +7,12 @@ import { FormBuilder, Validators } from '@angular/forms';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'ip-address-tracker';
+  response: any;
+  constructor(private fb: FormBuilder, public getIpService: GetIpService) { }
 
   ngOnInit() {}
-
-  constructor(private fb: FormBuilder, public getIpService: GetIpService) {}
 
   searchForm = this.fb.group({
     search: ['', [Validators.required]],
@@ -20,5 +20,12 @@ export class AppComponent implements OnInit{
 
   onSign(search: string) {
     this.getIpService.signIn(search);
+
+    if(search) {
+      this.getIpService.getCity().subscribe(res => {
+        this.response = res;
+        console.log(this.response);
+      })
+    }
   }
 }

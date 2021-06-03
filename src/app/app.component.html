@@ -14,24 +14,27 @@
       </div>
     </div>
     <!--  -->
-    <div class="container__result">
-      <div class="result">
+    <div class="container__result" *ngIf="response">
+      <div class="result" >
         <div class="container__items">
           <div class="id__address">
             <span class="item">Ip Address</span>
-            <span class="result__data">192.212.174.101</span>
+            <span class="result__data">{{response?.ip}}</span>
           </div>
+          <hr>
           <div class="location">
             <span class="item">Location</span>
-            <span class="result__data">Brooklyn, NY 10001</span>
+            <span class="result__data">{{response?.location?.city}}</span>
           </div>
+          <hr>
           <div class="timezone">
             <span class="item">Timezone</span>
-            <span class="result__data">UTC -05:00</span>
+            <span class="result__data">{{response?.location?.timezone}}</span>
           </div>
+          <hr>
           <div class="isp">
             <span class="item">ISP</span>
-            <span class="result__data">SpaceX Starlink</span>
+            <span class="result__data">{{response?.isp}}</span>
           </div>
         </div>
       </div>
