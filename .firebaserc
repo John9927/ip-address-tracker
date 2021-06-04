@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "ip-address-tracker-a2493": {
+      "hosting": {
+        "ip-address-tracker": [
+          "ip-address-tracker-a2493"
+        ]
+      }
+    }
+  }
+}
